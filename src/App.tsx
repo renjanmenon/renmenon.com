@@ -6,20 +6,9 @@ function App() {
     <main className="mx-auto max-w-xl px-6 py-16 sm:py-24">
       <h1 className="text-2xl font-semibold">Ren Menon</h1>
 
-      <div className="mt-6 space-y-4 leading-relaxed text-neutral-700">
-        <p>
-          I'm a software engineer. Most of my work has been on enterprise
-          teams, often as a contractor, building the systems large companies
-          run on.
-        </p>
-        <p>
-          This site is where I learn in public. I build small projects, compare
-          tools and languages, and write about what I find. Topics include
-          goroutines vs Rust vs Java, and how a senior engineer keeps learning
-          in the age of AI.
-        </p>
-        <p>Writing and projects are coming soon.</p>
-      </div>
+      <p className="mt-6 leading-relaxed text-neutral-700">
+        I'm a senior software engineer.
+      </p>
 
       <ul className="mt-8 flex gap-6">
         <li>
