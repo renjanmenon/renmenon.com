@@ -12,6 +12,7 @@ Personal website for Ren Menon, built to learn **TypeScript**, **React**, and **
 - [Project files and what each one does](#project-files-and-what-each-one-does)
 - [Automated checks run on every pull request](#automated-checks-run-on-every-pull-request)
 - [Deployment with Vercel (planned)](#deployment-with-vercel-planned)
+- [Visitor analytics show where traffic comes from, without cookies](#visitor-analytics-show-where-traffic-comes-from-without-cookies)
 - [Learning path](#learning-path)
 
 ## Architecture: how a change reaches the live site
@@ -117,7 +118,24 @@ Vercel is a hosting service that is free for personal projects. Once connected t
 1. Sign up at vercel.com with your GitHub account.
 2. Choose **Add New → Project** and import this repository.
 3. Accept the detected settings and click **Deploy**.
-4. Under **Project Settings → Domains**, add `renmenon.com` and set the DNS records Vercel shows at your domain registrar.
+4. The site goes live for free at an address like `renmenon.vercel.app`. You can rename it under **Project Settings → Domains**.
+5. Later, add `renmenon.com` in the same place and set the DNS records Vercel shows at your domain registrar.
+
+## Visitor analytics show where traffic comes from, without cookies
+
+**Vercel Web Analytics** is free on the Hobby plan and sets no cookies. `src/main.tsx` adds it with the `<Analytics />` component.
+
+**To turn it on:** in the Vercel dashboard, open the project, choose **Analytics**, and click **Enable**. Data appears after the next deploy. No data is collected during `npm run dev`.
+
+**What you can see:**
+
+- Page views and unique visitors
+- Referring site, for example `linkedin.com` or `google.com`
+- Country, browser, operating system and device type
+
+**What you cannot see:** who the visitor is. Browsers send only the referring site, not the LinkedIn profile or search terms.
+
+**To tell your own posts apart,** add a tag to links you share, for example `https://renmenon.vercel.app/?utm_source=linkedin`. The tag appears in the dashboard.
 
 ## Learning path
 
